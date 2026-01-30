@@ -45,8 +45,8 @@ export interface GridProps {
 	filtering: ComponentFramework.PropertyHelper.DataSetApi.FilterExpression;
 	resources: ComponentFramework.Resources;
 	itemsLoading: boolean;
-	highlightValue: string | null;
-	highlightColor: string | null;
+	//highlightValue: string | null;
+	//highlightColor: string | null;
 	setSelectedRecords: (ids: string[]) => void;
 	onNavigate: (item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord) => void;
 	onSort: (name: string, desc: boolean) => void;
@@ -106,8 +106,8 @@ export const Grid = React.memo((props: GridProps) => {
 		loadPreviousPage,
 		onFullScreen,
 		isFullScreen,
-		highlightValue,
-		highlightColor,
+		//highlightValue,
+		//highlightColor,
 		totalResultCount,
 	} = props;
 
@@ -275,9 +275,9 @@ export const Grid = React.memo((props: GridProps) => {
 
 		if (props?.item) {
 			// eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-member-access
-			if (highlightColor && highlightValue && props?.item?.getValue("HighlightIndicator") == highlightValue) {
-				customStyles.root = { backgroundColor: highlightColor };
-			}
+			//if (highlightColor && highlightValue && props?.item?.getValue("HighlightIndicator") == highlightValue) {
+			//	customStyles.root = { backgroundColor: highlightColor };
+			//}
 			return <DetailsRow {...props} styles={customStyles} />;
 		}
 

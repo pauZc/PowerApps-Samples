@@ -24,6 +24,7 @@ export class PAGridCustomizer implements ComponentFramework.ReactControl<IInputs
 		notifyOutputChanged: () => void,
 		state: ComponentFramework.Dictionary
 	): void {
+		
 		const eventName = context.parameters.EventName.raw;
 		if (eventName) {
 			const paOneGridCustomizer: PAOneGridCustomizer = { cellRendererOverrides, cellEditorOverrides };
